@@ -1,3 +1,8 @@
+<?php
+    require '_functions.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +68,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        $getFruits = selectFruits();
 
+                                        while ($fruit=$getFruits->fetch(PDO::FETCH_ASSOC)) {
+                                            
+                                        }
+                                    ?>
 
                                     <tr>
                                         <td class="text-center"></td>
@@ -71,6 +82,8 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
+
+
                                         <td class="text-center">
                                             <button
                                                 type="button"
