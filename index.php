@@ -27,7 +27,6 @@
                 <div class="card">
                     <div class="card-header">
                         Create / Retrieve / Update / Delete
-
                         <button
                             type="button"
                             class="btn btn-primary float-end"
@@ -37,7 +36,61 @@
                         </button>
                     </div>
                     <div class="card-body">
+                        <form action="_redirect.php" method="post">
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="fruitSearch"
+                                    id="fruitSearch"
+                                    placeholder="Search here ..."
+                                    autofocus
+                                    required>
+                            </div>
+                        </form>
 
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">ID</th>
+                                        <th>Fruit</th>
+                                        <th>Quantity</th>
+                                        <th>Registered</th>
+                                        <th>Updated</th>
+                                        <th class="text-center">Edit</th>
+                                        <th class="text-center">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    <tr>
+                                        <td class="text-center"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#edit_">Edit
+                                            </button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button
+                                                type="button"
+                                                class="btn btn-danger"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#delete_">Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
