@@ -23,3 +23,40 @@ function selectFruits()
     $statement->execute();
     return $statement;
 }
+
+function createFruit($fruitName, $fruitQty){
+    $statement = dbConnection()->prepare("INSERT INTO 
+                                            fruits
+                                            (
+                                                fruit_name,
+                                                fruit_qty,
+                                                fruit_created,
+                                                fruit_updated
+                                            )
+                                            VALUES
+                                            (
+                                                :fruit_name,
+                                                :fruit_qty,
+                                                NOW(),
+                                                NOW()
+                                            )");
+
+    //instead putting values directly to a query we use PDO variable
+    $statement->execute([
+        'fruit_name' => $fruitName,
+        'fruit_qty' => $fruitQty
+    ]);
+
+    //confirm if the query is executed properly
+    if ($statement) {
+        return true;
+    } else {
+        return false;
+    }
+    
+}
+
+
+
+
+
