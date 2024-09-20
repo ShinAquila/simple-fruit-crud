@@ -150,9 +150,8 @@ require '_functions.php';
         </div>
     </div>
 
-
-    <?php include '_scripts.php' ?>
-    <?php include '_alers.php' ?>
+    <?php include '_scripts.php'; ?>
+    <?php include '_alerts.php'; ?>
 
 
 </body>
