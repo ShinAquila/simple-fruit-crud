@@ -53,8 +53,33 @@ function createFruit($fruitName, $fruitQty){
     } else {
         return false;
     }
-    
 }
+
+function updateFruit($fruitName, $fruitQty, $fruitId){
+    // echo $fruitId;
+    $statement = dbConnection()->prepare("UPDATE fruits
+                                            SET 
+                                                fruit_name = :fruit_name,
+                                                fruit_qty = :fruit_qty,
+                                                fruit_updated = NOW()
+                                            WHERE 
+                                                fruit_id = :fruit_id");
+
+    //instead putting values directly to a query we use PDO variable
+    $statement->execute([
+        'fruit_name' => $fruitName,
+        'fruit_qty' => $fruitQty,
+        'fruit_id' => $fruitId
+    ]);
+
+    //confirm if the query is executed properly
+    if ($statement) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 
