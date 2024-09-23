@@ -27,10 +27,12 @@ require '_functions.php';
 <body class="bg-dark">
 
     <div class="container">
+        
         <div class="row mt-5">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
+                        <h1>PRUTAS</h1>
                         Create / Retrieve / Update / Delete
                         <button
                             type="button"
