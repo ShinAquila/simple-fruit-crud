@@ -130,7 +130,7 @@ require '_functions.php';
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="" class="form-label">Quantity</label>
-                                                                <input type="number" class="form-control" name="fruitQty" id="fruitQty" min="0" step="0.01" value="<?= $fruit['fruit_qty'] ?>" required>
+                                                                <input type="number" class="form-control" name="fruitQty" id="fruitQty" min="0" step="1" value="<?= $fruit['fruit_qty'] ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
