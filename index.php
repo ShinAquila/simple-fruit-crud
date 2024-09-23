@@ -149,25 +149,18 @@ require '_functions.php';
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title">Add Fruit</h5>
+                                                        <h5 class="modal-title">Delete Fruit - <?= $fruit['fruit_name'] ?></h5>
                                                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
 
-                                                    <form action="fruit_create.php" method="post">
+                                                    <form action="fruit_delete.php?fruitId=<?= $fruit['fruit_id'] ?>" method="post">
                                                         <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <label for="" class="form-label">Fruit Name</label>
-                                                                <input type="text" class="form-control" name="fruitName" id="fruitName" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="" class="form-label">Quantity</label>
-                                                                <input type="number" class="form-control" name="fruitQty" id="fruitQty" min="0" step="0.01" required>
-                                                            </div>
+                                                            <p>Trying to delete <?= $fruit['fruit_name'] ?>?</p>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="submit" name="createFruit" id="createFruit" class="btn btn-primary">Create</button>
+                                                            <button type="submit" name="deleteFruit" id="deleteFruit" class="btn btn-danger">Delete</button>
 
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                         </div>
@@ -175,10 +168,6 @@ require '_functions.php';
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
 
 
                                     <?php } ?>

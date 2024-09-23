@@ -80,6 +80,26 @@ function updateFruit($fruitName, $fruitQty, $fruitId){
     }
 }
 
+function deleteFruit($fruitId){
+    $statement = dbConnection()->prepare("DELETE 
+                                            FROM 
+                                                fruits
+                                            WHERE 
+                                                fruit_id = :fruit_id");
+
+    //instead putting values directly to a query we use PDO variable
+    $statement->execute([
+        'fruit_id' => $fruitId
+    ]);
+
+    //confirm if the query is executed properly
+    if ($statement) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 
