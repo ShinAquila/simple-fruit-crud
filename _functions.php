@@ -99,9 +99,3 @@ function deleteFruit($fruitId){
         return false;
     }
 }
-
-
-
-
-
-
