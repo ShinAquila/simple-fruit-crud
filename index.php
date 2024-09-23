@@ -134,7 +134,7 @@ require '_functions.php';
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="submit" name="updateFruit" id="updateFruit" class="btn btn-primary">Save Changes</button>
+                                                            <button type="submit" name="updateFruit" id="updateFruit" class="btn btn-success">Save Changes</button>
 
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                         </div>
@@ -203,7 +203,7 @@ require '_functions.php';
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" name="createFruit" id="createFruit" class="btn btn-primary">Create</button>
+                        <button type="submit" name="createFruit" id="createFruit" class="btn btn-success">Create</button>
 
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
