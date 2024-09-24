@@ -24,7 +24,8 @@ function selectFruits()
     return $statement;
 }
 
-function createFruit($fruitName, $fruitQty){
+function createFruit($fruitName, $fruitQty)
+{
     $statement = dbConnection()->prepare("INSERT INTO 
                                             fruits
                                             (
@@ -55,7 +56,8 @@ function createFruit($fruitName, $fruitQty){
     }
 }
 
-function updateFruit($fruitName, $fruitQty, $fruitId){
+function updateFruit($fruitName, $fruitQty, $fruitId)
+{
     // echo $fruitId;
     $statement = dbConnection()->prepare("UPDATE fruits
                                             SET 
@@ -80,7 +82,8 @@ function updateFruit($fruitName, $fruitQty, $fruitId){
     }
 }
 
-function deleteFruit($fruitId){
+function deleteFruit($fruitId)
+{
     $statement = dbConnection()->prepare("DELETE 
                                             FROM 
                                                 fruits
@@ -99,3 +102,43 @@ function deleteFruit($fruitId){
         return false;
     }
 }
+
+function searchFruits($searchText)
+{
+    $statement = dbConnection()->prepare("SELECT
+                                        *
+                                        FROM
+                                        fruits
+                                        WHERE
+                                        fruit_name LIKE :fruit_name
+                                        ORDER BY
+                                        fruit_name
+                                        ASC");
+    $statement->execute([
+        'fruit_name' => "%$searchText%"
+    ]);
+
+    return $statement;
+}
+
+function searchFruitsCount($searchText)
+{
+    $statement = dbConnection()->prepare("SELECT
+                                        *
+                                        FROM
+                                        fruits
+                                        WHERE
+                                        fruit_name LIKE :fruit_name
+                                        ORDER BY
+                                        fruit_name
+                                        ASC");
+    $statement->execute([
+        'fruit_name' => "%$searchText%"
+    ]);
+
+    $count = $statement->rowCount();
+
+    return $statement;
+}
+
+?>
