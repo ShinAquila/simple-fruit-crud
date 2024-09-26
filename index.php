@@ -32,8 +32,8 @@ require '_functions.php';
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h1>PRUTAS</h1>
-                        Create / Retrieve / Update / Delete
+                        <!-- <h1>PRUTAS</h1> -->
+                        Create | Retrieve | Update | Delete
                         <button
                             type="button"
                             class="btn btn-primary float-end"
